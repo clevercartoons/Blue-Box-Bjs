@@ -15,6 +15,10 @@ class CreateClassesTable extends Migration
     {
         Schema::create('classes', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
+            $table->string('code')->nullable();
+            $table->foreignId('grade_id')->nullable();
+            $table->text('status')->default(1);
             $table->timestamps();
         });
     }

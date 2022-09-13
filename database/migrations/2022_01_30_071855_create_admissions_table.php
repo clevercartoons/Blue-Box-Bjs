@@ -15,6 +15,19 @@ class CreateAdmissionsTable extends Migration
     {
         Schema::create('admissions', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('dob')->nullable();
+            $table->string('address')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('nationality')->nullable();
+            $table->string('religion')->nullable();
+            $table->foreignId('class_id')->nullable();
+            $table->foreignId('session_id')->nullable();
+            $table->foreignId('level_id')->nullable();
+            $table->string('grade_id')->nullable();
+            $table->string('photo')->nullable();
+            $table->text('status')->default(1);
             $table->timestamps();
         });
     }

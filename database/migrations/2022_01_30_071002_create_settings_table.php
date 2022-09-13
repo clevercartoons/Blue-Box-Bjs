@@ -15,6 +15,14 @@ class CreateSettingsTable extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
+            //school system settings information here...
+            $table->string('name')->nullable();
+            $table->date('establish_date')->nullable();
+            $table->text('address')->nullable();
+            $table->text('phone')->nullable();
+            $table->text('fax')->nullable();
+            $table->text('logo')->nullable();
+            $table->text('theme')->nullable();
             $table->timestamps();
         });
     }
